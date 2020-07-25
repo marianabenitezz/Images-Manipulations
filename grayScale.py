@@ -12,9 +12,6 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 
-
-
-
 #MatplotLib
 
 import numpy as np
@@ -30,8 +27,6 @@ image = Image.open('joseph.jpg').convert("L")
 image = np.asarray(image)
 plt.imshow(image, cmap='gray', vmin=0, vmax=255)
 plt.savefig("joseph_matplot.png")
-
-
 
 
 #MatplotLib Function
