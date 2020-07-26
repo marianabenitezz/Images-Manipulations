@@ -33,3 +33,11 @@ def histogramCLAHE(img):
     cl1 = clahe.apply(img)
 
     cv2.imwrite('image_CLAHE.jpg',cl1)
+
+
+def teste(img):
+    img_to_yuv = cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
+    img_to_yuv[:,:,0] = cv2.equalizeHist(img_to_yuv[:,:,0])
+    hist_equalization_result = cv2.cvtColor(img_to_yuv, cv2.COLOR_YUV2BGR)
+     
+    cv2.imwrite('ImagemResultado.jpg',hist_equalization_result)
